@@ -1,16 +1,23 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the controller to call when that URI is requested.
-|
-*/
-
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/1', function () {
+    require_once(base_path('/app/Observing.php'));
+});
+
+Event::listen('user.login', function () {
+    var_dump('email notify');
+});
+
+Event::listen('user.login', function () {
+    var_dump('do some report');
+});
+
+Route::get('/2', function () {
+    Event::fire('user.login');
+});
+
+Route::get('/3', 'HomeController@getIndex');
