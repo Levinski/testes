@@ -33,12 +33,19 @@
             .title {
                 font-size: 96px;
             }
+
+            .text {
+                font-size: 40px;
+            }
         </style>
     </head>
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Exemplos baseados nas aulas do Laracasts, cada aula é um branch</div>
+                <div class="title">Strategy pattern</div>
+                <div class="text">
+                    Define uma familia de algoritmos, toranando-as intercambiaveis, recebendo diferentes respostas com o mesmo proposito.
+                </div>
             </div>
         </div>
     </body>
