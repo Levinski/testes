@@ -18,7 +18,7 @@ Route::get('/', function () {
 // No-pattern
 Route::get('/1', function () {
 
-    abstract class VeganSub {
+    class VeganSub {
 
         public function make()
         {
