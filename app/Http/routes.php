@@ -14,3 +14,47 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Pattern
+Route::get('/1', function () {
+
+    interface Logger {
+        public function log($data);
+    }
+
+    class LogToFile implements Logger {
+
+        public function log($data)
+        {
+            var_dump('log to file');
+        }
+    }
+
+    class LogToDatabase implements Logger {
+
+        public function log($data)
+        {
+            var_dump('log to database');
+        }
+    }
+
+    class LogToXWebService implements Logger {
+
+        public function log($data)
+        {
+            var_dump('log to XWebService');
+        }
+    }
+
+    class App {
+
+        public function log($data, Logger $logger = null)
+        {
+            $logger = $logger ?: new LogToFile;
+            $logger->log($data);
+        }
+    }
+
+    $app = new App;
+    $app->log('testew', new LogToXWebService);
+});
