@@ -45,6 +45,10 @@
                 <div class="title">Adapters</div>
                 <div class="text">
                     Usado quando é necessario converter a interface de uma classe para a interface esperada pelo cliente
+                    <br>
+                    <a href="https://sourcemaking.com/design_patterns/adapter">
+                        para mais informaçoes clique aqui
+                    </a>
                 </div>
             </div>
         </div>
