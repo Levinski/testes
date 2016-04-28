@@ -33,12 +33,17 @@
             .title {
                 font-size: 96px;
             }
+
+            .text {
+                font-size: 40px;
+            }
         </style>
     </head>
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Exemplos baseados nas aulas do Laracasts, cada aula é um branch</div>
+                <div class="title">The chain of responsibility</div>
+                <div class="text">Encadeia objetos para verificar algo um apos o outro</div>
             </div>
         </div>
     </body>
