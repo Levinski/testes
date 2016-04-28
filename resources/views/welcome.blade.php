@@ -33,12 +33,19 @@
             .title {
                 font-size: 96px;
             }
+
+            .text {
+                font-size: 40px;
+            }
         </style>
     </head>
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Exemplos baseados nas aulas do Laracasts, cada aula é um branch</div>
+                <div class="title">Adapters</div>
+                <div class="text">
+                    Usado quando é necessario converter a interface de uma classe para a interface esperada pelo cliente
+                </div>
             </div>
         </div>
     </body>
