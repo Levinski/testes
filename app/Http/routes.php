@@ -111,3 +111,55 @@ Route::get('/2', function () {
     // se altera em um, todas as dependencias vao trabalhar com esse novo valor,
     // isso é oque um decorator deve fazer
 });
+
+Route::get('/3', function () {
+
+    class CarService {
+
+        protected $cost = 25;
+        protected $description = 'Basic inspection';
+
+        public function getCost()
+        {
+            return $this->cost;
+        }
+
+        public function setCost($cost)
+        {
+            $this->cost = $cost;
+        }
+
+        public function getDescription()
+        {
+            return $this->description;
+        }
+
+        public function setDescription($description)
+        {
+            $this->description = $description;
+        }
+
+        public function withOilChange()
+        {
+            $this->cost += 25;
+            $this->description .= ', and oil change';
+            return $this;
+        }
+
+        public function withTireRotation()
+        {
+            $this->cost += 20;
+            $this->description .= ', and tire rotation';
+            return $this;
+        }
+    }
+
+    $carService = (new CarService)
+        ->withOilChange()
+        ->withTireRotation();
+
+    echo $carService->getDescription() . ': $' . $carService->getCost();
+
+    // Nesse caso nao seria considerado um decorator,
+    // pois nao ha a dependencia de classes
+});
