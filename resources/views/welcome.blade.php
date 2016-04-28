@@ -33,12 +33,19 @@
             .title {
                 font-size: 96px;
             }
+            .text {
+                font-size: 40px;
+            }
         </style>
     </head>
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Exemplos baseados nas aulas do Laracasts, cada aula é um branch</div>
+                <div class="title">Decorator Pattern</div>
+                <div class="text">
+                    um decorator é usado quando uma classe depende de outra <br>
+                    para mais informaçoes acesse https://sourcemaking.com/design_patterns/decorator
+                </div>
             </div>
         </div>
     </body>
