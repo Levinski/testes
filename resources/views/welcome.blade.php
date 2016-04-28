@@ -33,12 +33,24 @@
             .title {
                 font-size: 96px;
             }
+
+            .text {
+                font-size: 40px;
+            }
         </style>
     </head>
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Exemplos baseados nas aulas do Laracasts, cada aula é um branch</div>
+                <div class="title">Template Method Pattern</div>
+                <div class="text">
+                    Usado para reajustar as ordens dos metodos,
+                    evitando repetições de metodos utilizando uma classe abstrata
+                    <br>
+                    <a href="https://sourcemaking.com/design_patterns/template_method">
+                        para mais informações clique aqui
+                    </a>
+                </div>
             </div>
         </div>
     </body>
