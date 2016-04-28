@@ -87,3 +87,59 @@ Route::get('/1', function () {
     echo '<br>';
     (new VeganSub)->make();
 });
+
+// Pattern
+Route::get('/2', function () {
+
+    abstract class AbstractSub {
+
+        public function make()
+        {
+            return $this
+                ->layBread()
+                ->additional()
+                ->addSoja();
+        }
+
+        protected function layBread()
+        {
+            var_dump('laying down the bread');
+
+            return $this;
+        }
+
+        protected function addSoja()
+        {
+            var_dump('add some soja');
+
+            return $this;
+        }
+
+        protected abstract function additional();
+    }
+
+    class VeganSub extends AbstractSub {
+
+        public function additional()
+        {
+            var_dump('add some vegetables');
+
+            return $this;
+        }
+    }
+
+    class CheeseSub extends AbstractSub {
+
+        public function additional()
+        {
+            var_dump('add some cheese');
+
+            return $this;
+        }
+    }
+
+
+    (new CheeseSub)->make();
+    echo '<br>';
+    (new VeganSub)->make();
+});
